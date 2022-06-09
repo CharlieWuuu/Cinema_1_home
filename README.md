@@ -4,7 +4,7 @@
 
 影展公告 https://charliewuuu.github.io/Cinema_3_whatsOn/
 
-影展介紹 https://charliewuuu.github.io/Cinema_4_aboutFestival/
+關於影展 https://charliewuuu.github.io/Cinema_4_aboutFestival/
 
 售票資訊 https://charliewuuu.github.io/Cinema_5_aboutTickets/
 
