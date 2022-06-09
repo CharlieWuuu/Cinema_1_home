@@ -10,8 +10,8 @@
 
 影片資訊 https://charliewuuu.github.io/Cinema_6_aboutFilm/
 
-我的最愛 https://charliewuuu.github.io/Cinema_7_myFavoriteFilm/
+我的片單 https://charliewuuu.github.io/Cinema_7_myFavoriteFilm/
 
 影片清單 https://charliewuuu.github.io/Cinema_8_FilmList/
 
-我的片單 https://charliewuuu.github.io/Cinema_9_timeline/
+場 次 表 https://charliewuuu.github.io/Cinema_9_timeline/
