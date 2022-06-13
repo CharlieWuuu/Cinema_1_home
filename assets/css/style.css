@@ -87,6 +87,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  -webkit-box-shadow: 0 0 0 1px black;
+          box-shadow: 0 0 0 1px black;
 }
 
 /* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
@@ -136,7 +138,7 @@ table {
   border-spacing: 0;
 }
 
-.navbar__container, .navbar__container .navbar__logo, .navbar__container .navbar__link, .navbar__container .navbar__link li a, .navbar__container .navbar__link li a p, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button .nav__button__search, header, .main article, .footer .footer__container, .footer .footer__upside, .footer .footer__downside, .footer .footer__downside .footer__logo, .footer .footer__downside .footer__share, .footer .footer__downside .footer__share a {
+.navbar__container, .navbar__container .navbar__logo, .navbar__container .navbar__link, .navbar__container .navbar__link li a, .navbar__container .navbar__link li a p, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button .nav__button__search, header, .main > article, article .title__container, article .title__container .title__all, .latest__news__container, .latest__more, .whatsOn__container .whatsOn__text, .whatsOn__container .whatsOn__more, .aboutFilmFes__container .aboutFilmFes__text, .footer .footer__container, .footer .footer__upside, .footer .footer__downside, .footer .footer__downside .footer__logo, .footer .footer__downside .footer__share, .footer .footer__downside .footer__share a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,88 +156,48 @@ body {
   font-family: 'Alata', sans-serif;
 }
 
-.background__line {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-  mix-blend-mode: soft-light;
-  opacity: 0.58;
-  z-index: -10;
-}
-
-.background__line img {
-  width: 100vw;
-  height: 100vh;
-  background-size: s;
-}
-
-.background__tail {
-  position: fixed;
+.background {
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  width: 100%;
+  height: 900vh;
   overflow: hidden;
-  z-index: -5;
 }
 
-.background__tail img {
-  position: relative;
-  width: 20vw;
-  bottom: -20vh;
-  -webkit-animation: float infinite 5s;
-          animation: float infinite 5s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+.background #tail__latest {
+  position: absolute;
+  top: 160vh;
+  width: 100%;
 }
 
-@-webkit-keyframes float {
-  0% {
-    -webkit-transform: translateY(-1vh);
-            transform: translateY(-1vh);
-  }
-  50% {
-    -webkit-transform: translateY(1vh);
-            transform: translateY(1vh);
-  }
-  100% {
-    -webkit-transform: translateY(-1vh);
-            transform: translateY(-1vh);
-  }
+.background #tail__whatsOn {
+  position: absolute;
+  top: 300vh;
+  right: 0px;
 }
 
-@keyframes float {
-  0% {
-    -webkit-transform: translateY(-1vh);
-            transform: translateY(-1vh);
-  }
-  50% {
-    -webkit-transform: translateY(1vh);
-            transform: translateY(1vh);
-  }
-  100% {
-    -webkit-transform: translateY(-1vh);
-            transform: translateY(-1vh);
-  }
+.background #tail__aboutFilmFes {
+  position: absolute;
+  top: 450vh;
+}
+
+.background #tail__manual {
+  position: absolute;
+  top: 500vh;
+  right: 0px;
+}
+
+.background #tail__getIt {
+  position: absolute;
+  top: 780vh;
+  width: 50%;
+  margin: 0 25% 0 25%;
 }
 
 .navbar__container {
   position: fixed;
   top: 0px;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   height: 65px;
   background-color: #6AB5B9;
@@ -363,7 +325,12 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
   height: 100vh;
+  background-color: #6AB5B9;
+  z-index: -10;
 }
 
 header .title__container {
@@ -372,20 +339,436 @@ header .title__container {
   color: #D3D6B1;
 }
 
-.main {
-  font-weight: 700;
-  font-size: 10rem;
-  color: #D3D6B1;
+.curve {
+  margin-top: 140vh;
+  left: 0;
+  width: 100%;
 }
 
-.main article {
-  height: 100vh;
+.main {
+  margin-top: -2px;
+  font-weight: 700;
+  background-color: #1E646A;
+}
+
+.main > article {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 140vh;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+article .title__container {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #D3D6B1;
+  height: 50vh;
+  z-index: 1;
+}
+
+article .title__container .title__all {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+article .title__container .title__all h1 {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 77px;
+}
+
+article .title__container .title__all .ZHtitle__line {
+  margin: 10px 15px;
+  width: 3px;
+  background-color: #6AB5B9;
+}
+
+article .title__container .title__all .ZHtitle__text {
+  width: 30px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.latest__news__container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 70vh;
+  z-index: 2;
+}
+
+.latest__news__container .news-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+.latest__news__container .news-list__item .news-list__background {
+  background-color: #fff;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.latest__news__container .news-list__item .news-list__background a {
+  text-decoration: none;
+}
+
+.latest__news__container .news-list__item .news-list__background a img {
+  position: relative;
+  right: 10px;
+  width: 100%;
+}
+
+.latest__news__container .news-list__item .news-list__background a .news-thumbnail__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+}
+
+.latest__news__container .news-list__item .news-list__background a .news-thumbnail__detail .news-thumbnail__title {
+  padding: 16px 8px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 28px;
+  color: #535353;
+}
+
+.latest__news__container .news-list__item .news-list__background a .news-thumbnail__detail .news-thumbnail__time {
+  padding: 16px 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: gray;
+}
+
+.latest__more {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 20vh;
+  width: 100%;
+}
+
+.latest__more a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+.whatsOn__container {
+  position: relative;
+  top: -10vh;
+  height: 65vh;
+  width: 60%;
+  margin-left: auto;
+}
+
+.whatsOn__container .whatsOn__date {
+  margin-bottom: 10px;
+}
+
+.whatsOn__container .whatsOn__date p {
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px white;
+}
+
+.whatsOn__container .whatsOn__text {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #6AB5B9;
+  padding: 15px 0;
+}
+
+.whatsOn__container .whatsOn__text p {
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
+}
+
+.whatsOn__container .whatsOn__text a {
+  font-size: 18px;
+  color: white;
+}
+
+.whatsOn__container .whatsOn__more {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 10vh;
+  width: 100%;
+}
+
+.whatsOn__container .whatsOn__more a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+.whatsOn__img {
+  position: relative;
+  height: 0vh;
+  width: 100%;
+}
+
+.whatsOn__img img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  bottom: 0px;
+  width: 35%;
+  height: 35vh;
+  border-radius: 0 50px 15px 0;
+}
+
+.whatsOn__cone {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 25vh;
+  width: 25%;
+  margin-left: auto;
+}
+
+.whatsOn__cone img {
+  position: absolute;
+  bottom: -75px;
+  width: 150px;
+}
+
+.aboutFilmFes__container {
+  position: relative;
+  top: -10vh;
+  height: 70vh;
+  width: 55%;
+  margin-left: auto;
+}
+
+.aboutFilmFes__container .aboutFilmFes__bg {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.aboutFilmFes__container .aboutFilmFes__logo {
+  margin-bottom: 10px;
+}
+
+.aboutFilmFes__container .aboutFilmFes__logo img {
+  position: absolute;
+  left: 55%;
+  width: 150px;
+}
+
+.aboutFilmFes__container .aboutFilmFes__text {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 20%;
+  margin-left: 10%;
+  line-height: 48px;
+}
+
+.aboutFilmFes__container .aboutFilmFes__text p {
+  font-weight: 300;
+  font-size: 22px;
+  color: white;
+}
+
+.aboutFilmFes__container .aboutFilmFes__text a {
+  font-size: 18px;
+  color: white;
+}
+
+.aboutFilmFes__container .aboutFilmFes__more a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+.aboutFilmFes__img {
+  position: relative;
+  height: 0vh;
+  width: 100%;
+}
+
+.aboutFilmFes__img img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.aboutFilmFes__img #img__horse {
+  width: 200px;
+  left: 15%;
+  bottom: 270px;
+  z-index: 1;
+}
+
+.aboutFilmFes__img #img__text {
+  width: 250px;
+  left: 25%;
+  bottom: 120px;
+}
+
+.manual__img {
+  position: relative;
+  height: 0vh;
+  width: 100%;
+}
+
+.manual__img img {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+.manual__container {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+}
+
+.manual__container img {
+  width: 100%;
+}
+
+.getIt .title__container {
+  bottom: 10vh;
+  position: relative;
+}
+
+.getIt__container {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: #FFFFFF;
+}
+
+.getIt__container .getIt__container__vertical {
+  width: 30%;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card {
+  background-color: #6AB5B9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__content .getIt__container__line {
+  width: 1.5px;
+  background-color: #fff;
+  margin: 5px 10px;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__content .getIt__container__text__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__content .getIt__container__text__container .getIt__container__text {
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__icon {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__icon img {
+  position: absolute;
+  right: 0;
+  bottom: 0rem;
+  width: 40px;
+  margin: 10px;
+}
+
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__icon #iconPlace {
+  height: 40px;
 }
 
 .footer {
+  position: relative;
   padding: 40px;
   background-color: #6AB5B9;
   color: #D3D6B1;
+  z-index: 10;
 }
 
 .footer .footer__container {

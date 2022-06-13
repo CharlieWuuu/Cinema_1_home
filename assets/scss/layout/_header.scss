@@ -1,5 +1,10 @@
 header{
+	position: fixed;
+	top: 0px;
+	width: 100%;
 	height: 100vh;
+	background-color: $color_main;
+	z-index: -10;
 	@extend %flex-center;
 
 	.title__container{
