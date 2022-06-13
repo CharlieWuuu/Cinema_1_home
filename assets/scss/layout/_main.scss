@@ -1,8 +1,10 @@
 // first view下面的波浪設計
 .curve{
-	margin-top: 140vh;
+	position: relative;
+	margin-top: -140px;
 	left: 0;
 	width: 100%;
+	z-index: 1;
 }
 
 .main {
@@ -18,10 +20,10 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-direction: column;
-	height: 140vh;
+	height: 90vh;
 	width: 90%;
 	max-width: 1200px;
-	margin: auto;
+	margin: 0 auto 10vh auto;
 }
 
 // 設定各節標題
@@ -30,7 +32,7 @@ article{
 		@extend %flex-center;
 		align-items: flex-end;
 		color:$color_secondary_golden;
-		height: 50vh;
+		height: 30vh;
 		z-index: 1;
 
 		.title__all{
@@ -65,7 +67,7 @@ article{
 	@extend %flex-center;
 	justify-content: space-between;
 	width: 100%;
-	height: 70vh;
+	height: 60vh;
 	z-index: 2;
 
 	.news-list__item{
@@ -82,8 +84,10 @@ article{
 
 				img{
 					position: relative;
+					object-fit: cover;
 					right: 10px;
 					width: 100%;
+					height: 160px;
 				}
 
 				.news-thumbnail__detail{
@@ -114,7 +118,7 @@ article{
 .latest__more{
 	@extend %flex-center;
 	align-items: flex-start;
-	height: 20vh;
+	height: 10vh;
 	width: 100%;
 
 	a{
@@ -279,14 +283,14 @@ article{
 	}
 	#img__horse{
 		width: 200px;
-		left: 15%;
-		bottom: 270px;
+		left: 12%;
+		bottom: 30vh;
 		z-index: 1;
 	}
 	#img__text{
 		width: 250px;
 		left: 25%;
-		bottom: 120px;
+		bottom: 10vh;
 	}
 }
 
@@ -305,15 +309,17 @@ article{
 .manual__container{
 	position: relative;
 	height: 70vh;
-	width: 100%;
-	img{
+	width: 80%;
+	margin: auto;
+	@extend %flex-center;
+	& > img{
 		width: 100%;
 	}
 }
 // 取得專刊
 .getIt{
 	.title__container{
-		bottom: 10vh;
+		height: 10vh;
 		position: relative;
 	}
 }

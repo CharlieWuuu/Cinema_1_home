@@ -136,7 +136,7 @@ table {
   border-spacing: 0;
 }
 
-.navbar__container, .navbar__container .navbar__logo, .navbar__container .navbar__link, .navbar__container .navbar__link li a, .navbar__container .navbar__link li a p, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button .nav__button__search, header, .main > article, article .title__container, article .title__container .title__all, .latest__news__container, .latest__more, .whatsOn__container .whatsOn__text, .whatsOn__container .whatsOn__more, .aboutFilmFes__container .aboutFilmFes__text, .footer .footer__container, .footer .footer__upside, .footer .footer__downside, .footer .footer__downside .footer__logo, .footer .footer__downside .footer__share, .footer .footer__downside .footer__share a {
+.navbar__container, .navbar__container .navbar__logo, .navbar__container .navbar__link, .navbar__container .navbar__link li a, .navbar__container .navbar__link li a p, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button .nav__button__search, header, .main > article, article .title__container, article .title__container .title__all, .latest__news__container, .latest__more, .whatsOn__container .whatsOn__text, .whatsOn__container .whatsOn__more, .aboutFilmFes__container .aboutFilmFes__text, .manual__container, .footer .footer__container, .footer .footer__upside, .footer .footer__downside, .footer .footer__downside .footer__logo, .footer .footer__downside .footer__share, .footer .footer__downside .footer__share a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,7 +149,6 @@ table {
 }
 
 body {
-  background-color: #1E646A;
   font-family: 'Noto Sans TC', sans-serif;
   font-family: 'Alata', sans-serif;
 }
@@ -158,36 +157,36 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 900vh;
+  height: 650vh;
   overflow: hidden;
 }
 
 .background #tail__latest {
   position: absolute;
-  top: 160vh;
+  top: 120vh;
   width: 100%;
 }
 
 .background #tail__whatsOn {
   position: absolute;
-  top: 300vh;
+  top: 250vh;
   right: 0px;
 }
 
 .background #tail__aboutFilmFes {
   position: absolute;
-  top: 450vh;
+  top: 320vh;
 }
 
 .background #tail__manual {
   position: absolute;
-  top: 500vh;
+  top: 300vh;
   right: 0px;
 }
 
 .background #tail__getIt {
   position: absolute;
-  top: 780vh;
+  top: 550vh;
   width: 50%;
   margin: 0 25% 0 25%;
 }
@@ -323,24 +322,142 @@ body {
 }
 
 header {
-  position: fixed;
+  position: static;
   top: 0px;
   width: 100%;
   height: 100vh;
-  background-color: #6AB5B9;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .header__bg__container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #0E6968, #6AB5B9);
   z-index: -10;
 }
 
-header .title__container {
-  font-weight: 700;
-  font-size: 10rem;
-  color: #D3D6B1;
+header .header__bg__container #tailBig {
+  position: absolute;
+  width: 40%;
+  top: -15vh;
+  left: 15%;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+header .header__bg__container #tailSmall1 {
+  position: absolute;
+  bottom: 0vh;
+  width: 70%;
+  left: -5%;
+  opacity: 0.5;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+header .header__bg__container #tailSmall2 {
+  position: absolute;
+  width: 60%;
+  top: 30vh;
+  right: -30%;
+  opacity: 0.5;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+
+header .header__main__container {
+  position: absolute;
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+}
+
+header .header__main__container .header__main__title__container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  height: 80%;
+  top: 15vh;
+  left: 10%;
+}
+
+header .header__main__container .header__main__title__container #ZHtitle {
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header .header__main__container .header__main__title__container #titleDate {
+  width: 100%;
+}
+
+header .header__main__container .header__main__title__container #ENtitle {
+  width: 100%;
+}
+
+header .header__main__container .header__main__title__container #arrow {
+  width: 100%;
+}
+
+header .header__main__container #horse {
+  position: absolute;
+  width: 50%;
+  right: 10%;
+  z-index: 3;
+}
+
+header .header__main__container #rainbow {
+  position: absolute;
+  height: 120%;
+  right: 0%;
+  z-index: 2;
+}
+
+header .header__main__container #cornO {
+  position: absolute;
+  width: 5%;
+  top: 68vh;
+  right: 5%;
+  z-index: 4;
+}
+
+header .header__main__container #cornG {
+  position: absolute;
+  width: 5%;
+  top: 40vh;
+  right: 15%;
+  z-index: 4;
+}
+
+header .header__main__container #cornP {
+  position: absolute;
+  width: 5%;
+  top: 70vh;
+  right: 23%;
+  z-index: 4;
 }
 
 .curve {
-  margin-top: 140vh;
+  position: relative;
+  margin-top: -140px;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .main {
@@ -361,10 +478,10 @@ header .title__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 140vh;
+  height: 90vh;
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 10vh auto;
 }
 
 article .title__container {
@@ -372,7 +489,7 @@ article .title__container {
       -ms-flex-align: end;
           align-items: flex-end;
   color: #D3D6B1;
-  height: 50vh;
+  height: 30vh;
   z-index: 1;
 }
 
@@ -407,7 +524,7 @@ article .title__container .title__all .ZHtitle__text {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   z-index: 2;
 }
 
@@ -430,8 +547,11 @@ article .title__container .title__all .ZHtitle__text {
 
 .latest__news__container .news-list__item .news-list__background a img {
   position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
   right: 10px;
   width: 100%;
+  height: 160px;
 }
 
 .latest__news__container .news-list__item .news-list__background a .news-thumbnail__detail {
@@ -464,7 +584,7 @@ article .title__container .title__all .ZHtitle__text {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 20vh;
+  height: 10vh;
   width: 100%;
 }
 
@@ -644,15 +764,15 @@ article .title__container .title__all .ZHtitle__text {
 
 .aboutFilmFes__img #img__horse {
   width: 200px;
-  left: 15%;
-  bottom: 270px;
+  left: 12%;
+  bottom: 30vh;
   z-index: 1;
 }
 
 .aboutFilmFes__img #img__text {
   width: 250px;
   left: 25%;
-  bottom: 120px;
+  bottom: 10vh;
 }
 
 .manual__img {
@@ -670,15 +790,16 @@ article .title__container .title__all .ZHtitle__text {
 .manual__container {
   position: relative;
   height: 70vh;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
-.manual__container img {
+.manual__container > img {
   width: 100%;
 }
 
 .getIt .title__container {
-  bottom: 10vh;
+  height: 10vh;
   position: relative;
 }
 
