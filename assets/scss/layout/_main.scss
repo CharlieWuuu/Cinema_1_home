@@ -8,6 +8,7 @@
 .main {
 	// 不知為何與上面的svg會有空隙，增加一個負的margin
 	margin-top: -2px;
+	padding-bottom: 20vh;
 	font-weight: 700;
 	background-color: #1E646A;
 }
@@ -319,7 +320,7 @@ article{
 
 .getIt__container{
 	position: relative;
-	height: 70vh;
+	height: 150vh;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;

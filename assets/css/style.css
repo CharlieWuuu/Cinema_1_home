@@ -87,8 +87,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  -webkit-box-shadow: 0 0 0 1px black;
-          box-shadow: 0 0 0 1px black;
 }
 
 /* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
@@ -347,6 +345,7 @@ header .title__container {
 
 .main {
   margin-top: -2px;
+  padding-bottom: 20vh;
   font-weight: 700;
   background-color: #1E646A;
 }
@@ -685,7 +684,7 @@ article .title__container .title__all .ZHtitle__text {
 
 .getIt__container {
   position: relative;
-  height: 70vh;
+  height: 150vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
