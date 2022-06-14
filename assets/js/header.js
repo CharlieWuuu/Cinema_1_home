@@ -6,18 +6,18 @@ function myFunction(e) {
 
   // 背景大尾巴
 
-  $('#tailBig').css('top', 'calc( -15vh + ' + -0.02 * y + 'px )');
+  $('#tailBig').css('top', 'calc( -10vh + ' + -0.02 * y + 'px )');
   $('#tailBig').css('left', 'calc( 15% + ' + -0.02 * x + 'px)');
 
   // 背景小尾巴(左)
 
   $('#tailSmall1').css('bottom', 'calc( 0vh + ' + -0.01 * y + 'px )');
-  $('#tailSmall1').css('left', 'calc( -5% + ' + 0.01 * x + 'px)');
+  $('#tailSmall1').css('left', 'calc( -10% + ' + 0.01 * x + 'px)');
 
   // 背景小尾巴(右)
 
-  $('#tailSmall2').css('top', 'calc( 30vh + ' + 0.01 * y + 'px )');
-  $('#tailSmall2').css('right', 'calc( -30% + ' + -0.01 * x + 'px)');
+  $('#tailSmall2').css('top', 'calc( -20vh + ' + 0.01 * y + 'px )');
+  $('#tailSmall2').css('right', 'calc( -15% + ' + -0.01 * x + 'px)');
 
   //馬
 
@@ -40,6 +40,6 @@ function myFunction(e) {
   $('#cornG').css('right', 'calc( 15% + ' + -0.06 * x + 'px)');
 
   //三角錐(粉)
-  $('#cornP').css('top', 'calc( 70vh + ' + 0.15 * y + 'px )');
-  $('#cornP').css('right', 'calc( 23% + ' + -0.12 * x + 'px)');
+  $('#cornP').css('top', 'calc( 70vh + ' + 0.18 * y + 'px )');
+  $('#cornP').css('right', 'calc( 23% + ' + -0.15 * x + 'px)');
 }
